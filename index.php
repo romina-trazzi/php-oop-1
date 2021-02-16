@@ -46,8 +46,8 @@ foreach ($villa1 as $key => $value) {
 $listaVille = [$villa1, $villa2, $villa3];
 
 foreach ($listaVille as $villa) {
-    foreach ($villa as $vi) {
-        // echo $vi . "<br>";
+    foreach ($villa as $value) {
+        // echo $value . "<br>";
     }
 };
 
@@ -74,10 +74,12 @@ foreach ($listaVille as $villa) {
 
         <?php 
             
-            foreach ($listaVille as $key => $villa) {
+            foreach ($listaVille as /* $index => */ $villa) {
                 echo "<div>";
-                foreach ($villa as $vi) {
-                    echo  $vi . "<br>";
+                // echo $index . "<br>";
+
+                foreach ($villa as $key => $value) {
+                    echo  $key . ":" . $value . "<br>";
                 }
                 
                 echo "<br></div>";
